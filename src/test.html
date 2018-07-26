@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>On Style Change</title>
+  <style type="text/css">
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+    }
+    #mydiv {
+      width: 50%;
+      height: 50vw;
+      background-color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <div id="mydiv"> </div>
+  <script src="onStyleChange.js"> </script>
+  <script>
+    onStyleChange (document.querySelector('#mydiv'), (property, propertyValue) => {
+      console.log ('Property', property, propertyValue)
+    })
+  </script>
+</body>
+</html>
